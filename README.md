@@ -191,31 +191,46 @@ recepcion	Detalles de la recepción del PC.	Texto
 ### Objetos de la Base de Datos
 
 #### Vistas (View)
-a)vw_donadores_anio2021_con_corei5: listado de donadores del año 2021 que tenían un microprocesador 'core i5':
+##### a) vw_donadores_anio2021_con_corei5
+*Listado de donadores del año 2021 que tenían un microprocesador 'core i5':*
 
-Objetivo	Obtener información de donadores en determinado momento en base a un componente particular
-Tablas que la componen	DONADORES, PERSONAS, PC_DONADAS
+|     | Descripción |
+| -------------: | ------------- |
+| Objetivo | Obtener información de donadores en determinado momento en base a un componente particular. |
+| Tablas que la componen | DONADORES, PERSONAS, PC_DONADAS |
 
-b)	vw_pc_disponibles_por_tipo: lista el total de PC disponibles para entregar clasificándolas por tipo de PC: notebook o escritorio:
+##### b) vw_pc_disponibles_por_tipo
+*Lista el total de PC disponibles para entregar clasificándolas por tipo de PC: notebook o escritorio:*
 
-Objetivo	Listar PC disponibles para entregar, clasificándolas.
-Tablas que la componen	PC_DONADAS, PC_REPARADAS, ENTREGAS
+|     | Descripción |
+| -------------: | ------------- |
+| Objetivo | Listar PC disponibles para entregar, clasificándolas. |
+| Tablas que la componen | PC_DONADAS, PC_REPARADAS, ENTREGAS |
 
 
-c)	vw_tecnicos_por_taller: lista la cantidad de técnicos disponibles clasificándolos por taller en donde se desempeñan:
+##### c) vw_tecnicos_por_taller
+*Lista la cantidad de técnicos disponibles clasificándolos por taller en donde se desempeñan:*
 
-Objetivo	Listar cantidad de técnicos en cada taller.
-Tablas que la componen	TALLERES, TALLERES
+|     | Descripción |
+| -------------: | ------------- |
+| Objetivo | Listar cantidad de técnicos en cada taller. |
+| Tablas que la componen | TALLERES, TALLERES |
 
-d)	vw_pc_disponible: detalla características de las computadoras disponibles para donar y si es nuevo o usado:
+##### d) vw_pc_disponible
+*Detalla características de las computadoras disponibles para donar y si es nuevo o usado:*
 
-Objetivo	Listar características de PC disponibles para donar.
-Tablas que la componen	PC_DONADAS, PC_REPARADAS, ENTREGAS
+|     | Descripción |
+| -------------: | ------------- |
+| Objetivo | Listar características de PC disponibles para donar. |
+| Tablas que la componen | PC_DONADAS, PC_REPARADAS, ENTREGAS |
 
-e)	vw_solicitudes_pendientes_evaluacion: permite conocer las solicitudes pendientes de evaluación:
+##### e) vw_solicitudes_pendientes_evaluacion
+*Permite conocer las solicitudes pendientes de evaluación:*
 
-Objetivo	Listar solicitudes pendientes de evaluación.
-Tablas que la componen	PERSONAS, SOLICITANTES, SOLICITUDES, EVALUACIONES
+|     | Descripción |
+| -------------: | ------------- |
+| Objetivo | Listar solicitudes pendientes de evaluación. |
+| Tablas que la componen | PERSONAS, SOLICITANTES, SOLICITUDES, EVALUACIONES |
 
 #### Funciones (Function)
 
@@ -287,7 +302,7 @@ Tablas que la componen	PERSONAS, SOLICITANTES, SOLICITUDES, EVALUACIONES
 | hora | Hora de modificación. | Hora |
 
 ###### a) TGR_LOG_INSERT_PERSONAS
-*registra, en la tabla PERSONAS_LOG, datos particulares de cada nueva persona DESPUES de ser INSERTADA.*
+*Registra, en la tabla PERSONAS_LOG, datos particulares de cada nueva persona DESPUES de ser INSERTADA.*
 
 ###### b) TGR_LOG_DELETE_PERSONAS
 *Registra, en la tabla PERSONAS_LOG, datos particulares de cada persona ANTES de ser ELIMINADA.*
