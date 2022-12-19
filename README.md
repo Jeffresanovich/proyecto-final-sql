@@ -3,7 +3,7 @@
 ***Comisión 34960***
 ***Curso SQL - CODER HOUSE***
 
----
+------------
 
 *Nombre del Proyecto:* **Administración de Computadoras**
 
@@ -15,14 +15,19 @@
 
 *Fecha de Entrega:* **Domingo 18/12/2022**
 
----
+------------
+
 [TOC]
 
 ### Introducción
 
-“Uno lo tiene, otro lo quiere”, es un slogan de una conocida página de compa venta, que busca satisfacer una demanda o necesidad realizando un intercambio de intereses o de bienes. En la actualidad la tecnología es parte fundamental de nuestro día a día, permitiendo mejores oportunidades de trabajo, de estudio, de interacción social, etc. Contar con un dispositivo que permita lograr estas experiencias se ha convertido en una necesidad. ¿Pero qué sucede cuando por diversos motivos esta necesidad no puede ser cubierta?
-Muchas personas, familias e incluso empresas, descartan y almacenan computadoras que, con un simple mantenimiento y actualización, podrían ayudar a otras personas y familias a tener una mejor experiencia de conectividad, tanto para estudiar, como para trabajar o simplemente aprender a manejar un nuevo dispositivo.
-Esta base de datos permite crear puentes entre una computadora que alguien tiene en desuso por diversas razones y un estudiante, trabajador o simplemente familia que no puede adquirirla.
+“Uno lo tiene, otro lo quiere”, es un slogan de una conocida página de compa venta, que busca satisfacer una demanda o necesidad realizando un intercambio de intereses o de bienes. Este modelo es base en las relaciones de comercio, económicas, pero también son el fundamento de las relaciones sociales.
+
+ En la actualidad la tecnología es protagonista de nuestro día a día, permitiendo mejores oportunidades de trabajo, de estudio, de interacción social, etc. Contar con un dispositivo que permita lograr estas experiencias se ha convertido en una necesidad. ¿Pero qué sucede cuando por diversos motivos esta necesidad no puede ser cubierta?
+Siguiendo con el modelo de intercambio de productos o servicios, muchas personas, familias e incluso empresas, descartan y almacenan computadoras que, con un simple mantenimiento y actualización, podrían ayudar a otras personas y familias a tener una mejor experiencia de conectividad, tanto para estudiar, como para trabajar o simplemente aprender a manejar un nuevo dispositivo.
+
+En este proyecto se desarrollará una base de datos donde se registren los datos necesarios para poder realizar este intercambio, creando puentes de conexión entre una computadora que alguien tiene en desuso por diversas razones y un estudiante, trabajador o simplemente familia que no puede adquirirla.
+
 
 ### Objetivo
 
@@ -39,9 +44,12 @@ Gestionar la información de computadoras donadas, registrando:
 
 ### Situación Problema
 
-En la actualidad, la conectividad abre puertas en todos los ámbitos de la vida, no contar con la posibilidad de tener un dispositivo que permita esta conexión puede significar la pérdida de oportunidades de progreso y crecimiento. 
+En la actualidad, la conectividad abre puertas en todos los ámbitos de la vida, no contar con la posibilidad de tener un dispositivo que permita esta conexión puede significar la pérdida de oportunidades de progreso y crecimiento.
+
 La situación económica de nuestro país sumado a otros factores trae como consecuencia que un gran número de personas no pueda acceder a estos dispositivos, provocando la deserción en estudios, la falta de oportunidades laborales, entre otros resultados. A su vez, del otro lado de la moneda, muchas personas suelen tener más de un dispositivo electrónico en sus hogares o empresas: celulares, tablets, relojes, televisores, etc.; todos inteligentes, esto hace que disminuya el uso de sus computadoras (escritorio o notebook), y estas queden desactualizas y/o averiadas en algún rincón de sus hogares o empresas. Otras personas simplemente pueden comprar nuevas computadoras y aún conservan las viejas o simplemente se han pasado de escritorio a notebook.
+
 De aquí surge la necesidad de crear la Base de Datos que permita hacer esta conexión entre personas que pueden ofrecer algo en desuso y/o tiempo y transformarlo en un alivio para personas que realmente lo necesitan.
+
 
 ### Herramientas tecnológicas utilizadas
 
@@ -88,7 +96,6 @@ Nombre campo	Descripción	Tipo
 id_tecnico	Identificador único asociado al técnico.	Número
 dni_persona	Identificador asociado a los datos de la persona previamente registrada.	Número
 id_taller	Identificador asociado a los datos del taller donde trabaja el técnico.	Número
-
 
 
 #### 4. TALLERES
@@ -174,10 +181,10 @@ id_pc_reparada	Identificador asociado a los datos de la PC reparada.	Número
 fecha_entrega	Fecha en que se realizó la entrega.	Fecha
 recepcion	Detalles de la recepción del PC.	Texto
 
----
+------------
 
 **Aclaraciones:**
-- Cada ítem esta dado por: nombre de la tabla y descripción, seguido del detalle de los campos. 
+- Cada ítem esta dado por: nombre de la tabla y descripción, seguido del detalle de los campos.
 - Todas las llaves primarias (primer campo de todas las tablas) son auto incrementales a excepción de la tabla PERSONAS (dni_persona).
 - Todos los campos son obligatorios, es decir, no aceptan valor nulo.
 
@@ -211,87 +218,98 @@ Objetivo	Listar solicitudes pendientes de evaluación.
 Tablas que la componen	PERSONAS, SOLICITANTES, SOLICITUDES, EVALUACIONES
 
 #### Funciones (Function)
-##### a)	FN_PC_DONADAS_POR_DONADOR:
 
-Objetivo	Listar PC donados por determinado donador.
-Ingreso	Identificador único asociado al donador: id_donador.
-Retorno	Listado de PC donadas.
+##### a) FN_PC_DONADAS_POR_DONADOR
+|  Acción  | Descripción |
+| -------------: | ------------- |
+|  Objetivo | Listar PC donados por determinado donador. |
+|  Ingreso | Identificador único asociado al donador: id_donador. |
+| Retorno | Listado de PC donadas. |
 
-##### b)	FN_NOMBRE_APELLIDO: 
+##### b) FN_NOMBRE_APELLIDO
+|  Acción  | Descripción |
+| -------------: | ------------- |
+| Objetivo | Identificar una persona en base a su DNI. |
+| Ingreso| Documento Nacional de Identidad asociada a una persona: dni_persona. |
+| Retorno | Nombre y apellido concatenados (unido como único dato). |
 
-Objetivo	Identificar una persona en base a su DNI.
-Ingreso	Documento Nacional de Identidad asociada a una persona: dni_persona.
-Retorno	Nombre y apellido concatenados (unido como único dato).
-
-##### c)	FN_TIPO_PERSONA: 
-
-Objetivo	Identificar el tipo de función que cumple una persona registrada.
-Ingreso	Documento Nacional de Identidad asociada a una persona: dni_persona.
-Retorno	El tipo de función que se asignó luego del registro.
+##### c) FN_TIPO_PERSONA
+|  Acción  | Descripción |
+| -------------: | ------------- |
+| Objetivo | Identificar el tipo de función que cumple una persona registrada. |
+| Ingreso | Documento Nacional de Identidad asociada a una persona: dni_persona. |
+| Retorno | El tipo de función que se asignó luego del registro. |
 
 #### Procedimientos Almacenados (Stored Procedures)
 
-a)	SP_ORDERNAR_PCDONADAS_POR: 
+##### a) SP_ORDERNAR_PCDONADAS_POR
 
-Objetivo	Ordenar tabla PC_DONADAS en base a un campo especifico.
-Ingreso	p_campo: cualquier campo de la tabla PC_DONADAS.
-p_orden: asc(ascendente) o desc(descendente).
-Retorno	Listado de PC donadas ordenada de acuerdo a los parámetros de entrada.
-
-
-b)	SP_INSERT_PERSONA: 
-
-Objetivo	Insertar un registro en la taba PERSONAS.
-Ingreso	Todos los campos que se encuentran en la tabla persona.
-Retorno	Texto confirmando el registro de la persona o si la persona se encuentra previamente registrada.
+|  Acción  | Descripción |
+| -------------: | ------------- |
+| Objetivo | Ordenar tabla PC_DONADAS en base a un campo especifico. |
+| Ingreso | p_campo: cualquier campo de la tabla PC_DONADAS.  |
+| Ingreso | p_orden: asc(ascendente) o desc(descendente). |
+| Retorno | Listado de PC donadas ordenada de acuerdo a los parámetros de entrada. |
 
 
-c)	SP_DELETE_REGISTRO:
+##### b) SP_INSERT_PERSONA
 
-Objetivo	Eliminar un registro particular de una tabla particular.
-Ingreso	p_tabla: nombre de la tabla.
-p_campo_primarykey: nombre del campo llave primaria.
-p_primarykey: valor de llave primaria del registro a borrar.
-Retorno	Nombre de la tabla y llave primeria del registro eliminado junto a un mensaje de éxito.
-
-
+|  Acción  | Descripción |
+| -------------: | ------------- |
+| Objetivo | Insertar un registro en la taba PERSONAS. |
+| Ingreso | Todos los campos que se encuentran en la tabla persona. |
+| Retorno | Texto confirmando el registro de la persona o si la persona se encuentra  previamente registrada. |
 
 
+##### c) SP_DELETE_REGISTRO
 
-
-
-
+|  Acción  | Descripción |
+| -------------: | ------------- |
+| Objetivo | Eliminar un registro particular de una tabla particular. |
+| Ingreso | p_tabla: nombre de la tabla. |
+| Ingreso | p_campo_primarykey: nombre del campo llave primaria. |
+| Ingreso | p_primarykey: valor de llave primaria del registro a borrar. |
+| Retorno | Nombre de la tabla y llave primeria del registro eliminado junto a un mensaje de éxito. |
 
 
 
 #### Disparadores (Triggers)
-a)	TGR_LOG_INSERT_PERSONAS: registra datos particulares (en la tabla PERSONAS_LOG) de cada nueva persona, DESPUES de su alta.
 
-b)	TGR_LOG_DELETE_PERSONAS: registra datos particulares (en la tabla PERSONAS_LOG) de cada persona, ANTES de ser eliminada.
+##### Tabla: PERSONAS_LOG
 
-Tabla PERSONAS_LOG: 
-Nombre campo	Descripción	Tipo
-id_peronas_log	Identificador único asociado al registro de logs.	Número
-accion	Registra el tipo de acción: insert o delete de una persona.	Texto
-tabla	Tabla sobre la que se monitorea el movimiento.	Texto
-usuario	Usuario que realizo la modificación.	Texto
-fecha	Fecha de modificación.	Fecha
-hora	Hora de modificación.	Hora
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_peronas_log | Identificador único asociado al registro de logs. | Número |
+| accion | Registra el tipo de acción: insert o delete de una persona. | Texto |
+| tabla | Tabla sobre la que se monitorea el movimiento. | Texto |
+| usuario | Usuario que realizo la modificación. | Texto |
+| fecha | Fecha de modificación. | Fecha |
+| hora | Hora de modificación. | Hora |
+
+###### a) TGR_LOG_INSERT_PERSONAS
+*registra, en la tabla PERSONAS_LOG, datos particulares de cada nueva persona DESPUES de ser INSERTADA.*
+
+###### b) TGR_LOG_DELETE_PERSONAS
+*Registra, en la tabla PERSONAS_LOG, datos particulares de cada persona ANTES de ser ELIMINADA.*
 
 
-c)	TGR_PC_DISPONIBLE: registra el valor de 1 (en la tabla MOVIMIENTOS_PC) por cada PC DESPUES de ser insertada en tabla PC_REPARADAS.
+##### Tabla: MOVIMIENTOS_PC
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_mov_pc | Identificador único asociado al registro de movimiento | Número |
+| pc_disponible | Registra un 1 después de insertar una PC_REPARADA. | Número |
+| entregada | Registra un 1 antes de insertar una ENTREGA . | Número |
+| tabla | Tabla de donde proviene la información: PC_REPARADAS o ENTREGAS | Texto |
+| usuario | Usuario que realizo el registro. | Texto |
+| fecha | Fecha de registro. | Fecha |
+| hora | Hora de registro. | Hora |
 
-d)	TGR_PC_ENTREGADAS: registra el valor de 1 por cada PC ANTES de ser insertada en tabla ENTREGAS.
+###### a) TGR_PC_DISPONIBLE
+*Registra el valor de 1 en la tabla MOVIMIENTOS_PC, DESPUES de ser INSERTADA una PC en la tabla PC_REPARADAS.*
 
-Tabla MOVIMIENTOS_PC: 
-Nombre campo	Descripción	Tipo
-id_mov_pc	Identificador único asociado al registro de movimiento	Número
-pc_disponible	Registra un 1 después de insertar una PC_REPARADA.	Número
-entregada	Registra un 1 antes de insertar una ENTREGA .	Número
-tabla	Tabla de donde proviene la información: PC_REPARADAS o ENTREGAS	Texto
-usuario	Usuario que realizo el registro.	Texto
-fecha	Fecha de registro.	Fecha
-hora	Hora de registro.	Hora
+###### b) TGR_PC_ENTREGADAS
+*Registra el valor de 1 en la tabla MOVIMIENTOS_PC, ANTES de ser INSERTADA una PC en tabla ENTREGAS.*
+
 
 
 ### Reportes
