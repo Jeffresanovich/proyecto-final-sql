@@ -1,7 +1,5 @@
 # Informe Proyecto Final
 
----
-
 ***Comisión 34960***
 ***Curso SQL - CODER HOUSE***
 
@@ -53,12 +51,12 @@ Las herramientas y aplicaciones tecnológicas utilizadas para este proyecto son:
 - Microsoft Word	Armado del Informe General.
 - Microsoft Excel	Generación de reportes.
 
-###Diagrama Entidad Relación (DER)
+### Diagrama Entidad Relación (DER)
 
 ![Diagrama Entidad Relacion](https://github.com/Jeffresanovich/proyecto-final-sql/blob/master/img/DER.png?raw=true)
 
 
-###Definición de Tablas
+### Definición de Tablas
 
 El proyecto está compuesto por 11 tablas, detalladas a continuación:
 
@@ -177,7 +175,7 @@ fecha_entrega	Fecha en que se realizó la entrega.	Fecha
 recepcion	Detalles de la recepción del PC.	Texto
 
 ---
-*** Aclaraciones:**
+** * Aclaraciones: **
 - Cada ítem esta dado por: nombre de la tabla y descripción, seguido del detalle de los campos. 
 - Todas las llaves primarias (primer campo de todas las tablas) son auto incrementales a excepción de la tabla PERSONAS (dni_persona).
 - Todos los campos son obligatorios, es decir, no aceptan valor nulo.
