@@ -71,115 +71,126 @@ El proyecto está compuesto por 11 tablas, detalladas a continuación:
 #### 1. PERSONAS
 *Datos importantes de toda persona involucrada en el proceso, independientemente de rol que luego cumpla.*
 
-Nombre campo	Descripción	Tipo
-dni_persona	Documento Nacional de Identidad asociada a una persona.	Número
-nombre	Nombres de la persona.	Texto
-apellido	Apellidos de la persona.	Texto
-direccion	Lugar donde reside actualmente.	Texto
-telefono	Número de teléfono o celular para contacto.	Texto
-email	Correo electrónico.	Texto
-fecha_naci	Fecha de nacimiento.	Fecha
-fecha_alta	Fecha de alta en el sistema.	Fecha
-estado	Estado actual en la aplicación: activo o inactivo.	Texto
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| dni_persona | Documento Nacional de Identidad asociada a una persona. | Número |
+| nombre | Nombres de la persona. | Texto |
+| apellido | Apellidos de la persona. | Texto |
+| direccion | Lugar donde reside actualmente. | Texto |
+| telefono | Número de teléfono o celular para contacto. | Texto |
+| email | Correo electrónico. | Texto |
+| fecha_naci | Fecha de nacimiento. | Fecha |
+| fecha_alta | Fecha de alta en el sistema. | Fecha |
+| estado | Estado actual en la aplicación: activo o inactivo. | Texto |
 
 #### 2. DONADORES
 *Asigna un identificador único a un tipo de persona que se registre como donador.*
 
-Nombre campo	Descripción	Tipo
-id_donador	Identificador único asociado al donador.	Número
-dni_persona	Identificador asociado a los datos de la persona previamente registrada.	Número
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_donador | Identificador único asociado al donador. | Número |
+| dni_persona | Identificador asociado a los datos de la persona previamente registrada. | Número |
 
 #### 3. TECNICOS
 *Asigna un identificador único a un tipo de persona que se registre como técnico y el taller donde trabaja.*
 
-Nombre campo	Descripción	Tipo
-id_tecnico	Identificador único asociado al técnico.	Número
-dni_persona	Identificador asociado a los datos de la persona previamente registrada.	Número
-id_taller	Identificador asociado a los datos del taller donde trabaja el técnico.	Número
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_tecnico | Identificador único asociado al técnico. | Número |
+| dni_persona | Identificador asociado a los datos de la persona previamente registrada. | Número |
+| id_taller | Identificador asociado a los datos del taller donde trabaja el técnico. | Número |
 
 
 #### 4. TALLERES
 *Almacena información del taller donde trabajan uno o más técnicos.*
 
-Nombre campo	Descripción	Tipo
-id_taller	Identificador único asociado al taller.	Número
-nombre	Nombre o razón social del taller.	Texto
-direccion	Dirección física del taller.	Texto
-telefono	Número de teléfono o celular para contacto.	Texto
-email	Dirección de correo electrónico.	Texto
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_taller | Identificador único asociado al taller. | Número |
+| nombre | Nombre o razón social del taller. | Texto |
+| direccion | Dirección física del taller. | Texto |
+| telefono | Número de teléfono o celular para contacto. | Texto |
+| email | Dirección de correo electrónico. | Texto |
 
 #### 5. SELECTORES 
 *Asigna un identificador único a un tipo de persona que se registre como selector.*
 
-Nombre campo	Descripción	Tipo
-id_selector	Identificador único asociado al selector.	Número
-dni_persona	Identificador asociado a los datos de la persona previamente registrada.	Número
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_selector | Identificador único asociado al selector. | Número |
+| dni_persona | Identificador asociado a los datos de la persona previamente registrada. | Número |
 
 #### 6. SOLICITANTES
 *Asigna un identificador único a un tipo de persona que se registre como solicitante.*
 
-Nombre campo	Descripción	Tipo
-id_solicitante	Identificador único asociado al solicitante.	Número
-dni_persona	Identificador asociado a los datos de la persona previamente registrada.	Número
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_solicitante | Identificador único asociado al solicitante. | Número|
+| dni_persona |  asociado a los datos de la persona previamente registrada. | Número|
 
 #### 7. SOLICITUDES
 *Vincula un solicitante con el propósito y fecha de la solicitud.*
 
-Nombre campo	Descripción	Tipo
-id_solicitud	Identificador único asociado al pedido o solicitud.	Número
-id_solicitante	Identificador asociado a los datos del solicitante.	Número
-fecha_solicitud	Fecha de registro de la solicitud o aplicación.	Fecha
-proposito	Propósito de la aplicación para un PC.	Texto
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_solicitud | Identificador único asociado al pedido o solicitud. | Número |
+| id_solicitante | Identificador asociado a los datos del solicitante. | Número |
+| fecha_solicitud | Fecha de registro de la solicitud o aplicación. | Fecha |
+| proposito | Propósito de la aplicación para un PC. | Texto |
 
 
 #### 8. EVALUACIONES
 *Registra el resultado las evaluaciones de las solicitudes.*
 
-Nombre campo	Descripción	Tipo
-id_evaluacion	Identificador único asociado a la evaluación de la solicitud previamente registrada.	Número
-id_selector	Identificador asociado a los datos del selector.	Número
-id_solicitud	Identificador asociado a los datos de la solicitud.	Número
-fecha_evaluacion	Fecha en que realizo la evaluación.	Fecha
-resultado	Resultado obtenido: aprobado o rechazado.	Texto
-comentario	Comentario sobre la evaluación. 	Texto
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_evaluacion | Identificador único asociado a la evaluación de la solicitud previamente registrada. | Número |
+| id_selector | Identificador asociado a los datos del selector. | Número |
+| id_solicitud | Identificador asociado a los datos de la solicitud. | Número |
+| fecha_evaluacion | Fecha en que realizo la evaluación. | Fecha |
+| resultado | Resultado obtenido: aprobado o rechazado. | Texto |
+| comentario | Comentario sobre la evaluación. | Texto |
 
 #### 9. PC_DONADAS
 *Registra datos relevantes de la computadora donada y su respectiva falla.*
 
-Nombre campo	Descripción	Tipo
-id_pc_donada	Identificador único asociado a las características de la PC donada.	Número
-id_donador	Identificador asociado a los datos del donador.	Número
-fecha_donacion	Fecha en que se efectuó la donación.	Fecha
-condicion	Condición del PC: nuevo o usado.	Texto
-tipo	Tipo de PC: escritorio o notebook.	Texto
-uso	Para que se usara: hogar o trabajo. 	Texto
-micro	Características del microprocesador.	Texto
-mother	Características de la placa madre.	Texto
-ram	Características de la memoria RAM.	Texto
-rom	Características de la memoria ROM (HDD, SSD, etc).	Texto
-pantalla	Características de la pantalla.	Texto
-falla	Detalle de falla o estado de PC.	Texto
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_pc_donada | Identificador único asociado a las características de la PC donada. | Número |
+| id_donador | Identificador asociado a los datos del donador. | Número |
+| fecha_donacion | Fecha en que se efectuó la donación. | Fecha |
+| condicion | Condición del PC: nuevo o usado. | Texto |
+| tipo | Tipo de PC: escritorio o notebook. | Texto |
+| uso | Para que se usara: hogar o trabajo. | Texto |
+| micro | Características del microprocesador. | Texto |
+| mother | Características de la placa madre. | Texto |
+| ram | Características de la memoria RAM. | Texto |
+| rom | Características de la memoria ROM (HDD, SSD, etc). | Texto |
+| pantalla | Características de la pantalla. | Texto |
+| falla | Detalle de falla o estado de PC. | Texto |
 
 #### 10. PC_REPARADAS
 *Vincula la computadora donada con un técnico responsable de su reparación o baja del quipo.*
 
-Nombre campo	Descripción	Tipo
-id_pc_reparada	Identificador único asociado a la reparación del PC.	Número
-id_pc_donada	Identificador asociado a los datos de la PC donada.	Número
-id_tecnico	Identificador asociado a los datos del técnico encargado de la reparación o mantenimiento.	Número
-fecha_reparacion	Fecha en que se realizó el trabajo.	Fecha
-estado	Estado del PC luego de la intervención del técnico: alta o baja.	Texto
-comentario	Detalle de las pruebas realizadas y/o motivo de baja.	Texto
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_pc_reparada | Identificador único asociado a la reparación del PC. | Número |
+| id_pc_donada | Identificador asociado a los datos de la PC donada. | Número |
+| id_tecnico | Identificador asociado a los datos del técnico encargado de la reparación o mantenimiento. | Número |
+| fecha_reparacion | Fecha en que se realizó el trabajo. | Fecha |
+| estado | Estado del PC luego de la intervención del técnico: alta o baja. | Texto |
+| comentario | Detalle de las pruebas realizadas y/o motivo de baja. | Texto |
 
 #### 11. ENTREGAS
 *Registra los datos de entrega de la computadora reparada con el solicitante previamente evaluado y aprobado.*
 
-Nombre campo	Descripción	Tipo
-id_entrega	Identificador único asociado a los datos de entrega.	Número
-id_evaluacion	Identificador asociado a los datos de la evaluación.	Número
-id_pc_reparada	Identificador asociado a los datos de la PC reparada.	Número
-fecha_entrega	Fecha en que se realizó la entrega.	Fecha
-recepcion	Detalles de la recepción del PC.	Texto
+| Nombre campo | Descripción | Tipo |
+| -------------: | ------------- | :-------------: |
+| id_entrega | Identificador único asociado a los datos de entrega. | Número |
+| id_evaluacion | Identificador asociado a los datos de la evaluación. | Número |
+| id_pc_reparada | Identificador asociado a los datos de la PC reparada. | Número |
+| fecha_entrega | Fecha en que se realizó la entrega. | Fecha |
+| recepcion | Detalles de la recepción del PC. | Texto |
 
 ------------
 
