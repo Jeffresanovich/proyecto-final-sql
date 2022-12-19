@@ -175,7 +175,7 @@ fecha_entrega	Fecha en que se realizó la entrega.	Fecha
 recepcion	Detalles de la recepción del PC.	Texto
 
 ---
-** *Aclaraciones: **
+__ *Aclaraciones:__
 - Cada ítem esta dado por: nombre de la tabla y descripción, seguido del detalle de los campos. 
 - Todas las llaves primarias (primer campo de todas las tablas) son auto incrementales a excepción de la tabla PERSONAS (dni_persona).
 - Todos los campos son obligatorios, es decir, no aceptan valor nulo.
